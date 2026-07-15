@@ -1476,8 +1476,7 @@ describe("get_build — branch coverage", () => {
 describe("query_graphql — branch coverage", () => {
   test("forwards query + variables + operationName and returns the endpoint's data", async () => {
     const res = await callTool("query_graphql", {
-      query:
-        "query GetSubnet($n: Int!) { subnet(netuid: $n) { netuid } }",
+      query: "query GetSubnet($n: Int!) { subnet(netuid: $n) { netuid } }",
       variables: { n: 1 },
       operationName: "GetSubnet",
     });
